@@ -62,14 +62,14 @@ class Character(DefaultCharacter):
         if selfaccount and selfaccount.db.is_staff:
             # Staffer, highlight Red
             name = "|R%s|n" % name
-        else if selfaccount and selfaccount.db.is_builder:
+        elif selfaccount and selfaccount.db.is_builder:
             # Builder, highlight Yellow
             name = "|Y%s|n" % name
 
         if lookaccount == selfaccount:
             # You can always see your own DBRef
             name = "%s(#%s)" % (name, self.id)
-        else if (lookaccount and (lookaccount.permissions.get("Developers") or lookaccount.db.is_staff or lookaccount.db.is_builder)):
+        elif (lookaccount and (lookaccount.permissions.get("Developers") or lookaccount.db.is_staff or lookaccount.db.is_builder)):
             # Looker is privileged, add that DBRef
             name = "%s(#%s)" % (name, self.id)
 

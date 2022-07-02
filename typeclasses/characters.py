@@ -69,7 +69,7 @@ class Character(DefaultCharacter):
         if lookaccount == selfaccount:
             # You can always see your own DBRef
             name = "%s(#%s)" % (name, self.id)
-        else if lookaccount and (lookaccount.permissions.get("Developers") or lookaccount.db.is_staff or lookaccount.db.is_builder):
+        else if (lookaccount and (lookaccount.permissions.get("Developers") or lookaccount.db.is_staff or lookaccount.db.is_builder)):
             # Looker is privileged, add that DBRef
             name = "%s(#%s)" % (name, self.id)
 

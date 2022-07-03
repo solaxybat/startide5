@@ -9,7 +9,7 @@ creation commands.
 """
 import time
 from evennia import DefaultCharacter
-from commands.assist import header, footer, csex
+from commands.assist import header, footer, csex, splitter
 
 
 class Character(DefaultCharacter):
@@ -80,11 +80,10 @@ class Character(DefaultCharacter):
         string += "\n\n{}".format(desc) if desc else "\nA nebulous concept."
 
         # Can't quite figure out how to parse this (yet).
-        if len(contents) > 0:
-            string += "\n\nCarrying: "
-            for con in contents[:-1]:
-                string += con.get_display_name(looker) + ", "
-            string += contents[:1]
+        if contents:
+            string += "\n\n"
+            string += splitter("Carrying: ")
+            string += "\n\n" + contents
 
         string += "\n\n"
         string += footer()

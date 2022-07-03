@@ -42,10 +42,19 @@ def footer(footer_text=None, width=MAX_WIDTH):
         footer_string = "|R'" + ( fill * (width - 8 - len(footer_text))) + "-< |G" + footer_text + "|R >-'|n"
 
     else:
-        footer_string = "|R'" + ( fill * (width - 8 - len(settings.SERVERNAME))) + "-< |G" + settings.SERVERNAME + "|R >-'|n"
+        footer_string = "|R'" + ( fill * (width - 8 - len(settings.SERVERNAME))) + ">- |G" + settings.SERVERNAME + "|R -<'|n"
 
     return footer_string
 
+def splitter(spliter_text=None, width=MAX_WIDTH):
+    splitter_string = ""
+    fill = "-"
+    if header_text:
+        splitter_string = "|R>-< |G" + splitter_text + " |R>-" + (fill * (width - 8 - len(splitter_text))) + "-<|n"
+    else:
+        splitter_string = "|R." + (fill * (width - 2)) + ".|n"
+
+    return splitter_string
 
 # csex accepts input, if it matches any of the registered 'sex' varients
 # it will return it colorized for consistency. Set short to True to get

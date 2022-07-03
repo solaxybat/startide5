@@ -22,7 +22,6 @@ Usage:
 """
 
 from evennia import CmdSet
-from commands.command import MuxCommand
 from evennia.utils import evtable
 from commands import assist
 from assist import header, footer, csex

@@ -80,10 +80,12 @@ class Character(DefaultCharacter):
         string += "\n\n{}".format(desc) if desc else "\nA nebulous concept."
 
         # Can't quite figure out how to parse this (yet).
+        """
         if contents:
             string += "\n\n"
             string += splitter("Carrying: ")
             string += "\n\n" + contents
+        """
 
         string += "\n\n"
         string += footer()

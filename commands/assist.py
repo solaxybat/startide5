@@ -46,7 +46,7 @@ def footer(footer_text=None, width=MAX_WIDTH):
 
     return footer_string
 
-def splitter(spliter_text=None, width=MAX_WIDTH):
+def splitter(splitter_text=None, width=MAX_WIDTH):
     splitter_string = ""
     fill = "-"
     if splitter_text:

@@ -21,6 +21,7 @@ Usage:
     +wi/list:            Display a full list of currently registered keys.
 """
 
+from commands.command import Command
 from evennia import CmdSet
 from evennia.utils import evtable
 from commands import assist

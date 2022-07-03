@@ -49,7 +49,7 @@ def footer(footer_text=None, width=MAX_WIDTH):
 def splitter(spliter_text=None, width=MAX_WIDTH):
     splitter_string = ""
     fill = "-"
-    if header_text:
+    if splitter_text:
         splitter_string = "|R>-< |G" + splitter_text + " |R>-" + (fill * (width - 8 - len(splitter_text))) + "-<|n"
     else:
         splitter_string = "|R." + (fill * (width - 2)) + ".|n"

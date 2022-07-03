@@ -15,7 +15,12 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 """
 
 from evennia import default_cmds
-
+from commands import editaccount
+from commands import wixxx
+from commands import who
+from commands import spoof
+from commands import ooc
+from commands import icooc
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
     """
@@ -54,7 +59,7 @@ class AccountCmdSet(default_cmds.AccountCmdSet):
         #
         # any commands you add below will overload the default ones.
         #
-        #self.add(wixxx.CmdWixxx())
+        self.add(wixxx.CmdWixxx())
         self.add(editaccount.CmdEditAccount())
         self.add(icooc.goIC())
         self.add(icooc.goOOC())

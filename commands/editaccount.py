@@ -11,7 +11,7 @@ from commands.command import Command
 from evennia.utils.evmenu import EvMenu
 from evennia.utils.evtable import wrap
 from commands import assist
-from assist import header, footer, csex
+#from assist import header, footer, csex
 
 class CmdEditAccount(Command):
     """

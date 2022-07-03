@@ -10,8 +10,8 @@ from evennia import default_cmds
 from commands.command import Command
 from evennia.utils.evmenu import EvMenu
 from evennia.utils.evtable import wrap
-from commands import assist
-#from assist import header, footer, csex
+from commands.assist import csex, MAX_WIDTH, header, footer, timestring
+
 
 class CmdEditAccount(Command):
     """

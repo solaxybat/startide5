@@ -24,7 +24,7 @@ Usage:
 from commands.command import Command
 from evennia import CmdSet
 from evennia.utils import evtable
-from commands import assist
+from commands.assist import csex, MAX_WIDTH, header, footer, timestring
 
 class CmdWixxx(Command):
     """

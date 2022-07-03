@@ -27,7 +27,7 @@ from evennia.utils import evtable
 from commands import assist
 from assist import header, footer, csex
 
-class CmdWixxx(MuxCommand):
+class CmdWixxx(Command):
     """
     What-Is XXX is a MUCK-based command allowing specific characters to set a list of 'interests'
     or likes that allow others to find them. As noted by the XXX, this particular version is

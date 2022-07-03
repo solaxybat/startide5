@@ -7,7 +7,9 @@ is setup to be the "default" character type created by the default
 creation commands.
 
 """
+import time
 from evennia import DefaultCharacter
+from commands.assist import header, footer, csex
 
 
 class Character(DefaultCharacter):
